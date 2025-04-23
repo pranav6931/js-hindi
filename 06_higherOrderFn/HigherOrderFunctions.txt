@@ -1,0 +1,31 @@
+Method	                Use Case Example
+
+map()	                Transform each item
+filter()	            Keep only matching items
+reduce()	            Accumulate into a single value
+
+forEach()	            Iterate (but doesn’t return anything)
+some()	                Check if any item meets a condition
+every()             	Check if all items meet a condition
+
+find()	                Get the first item that matches
+includes()	            Check if array contains a value
+sort()	                Reorder array items
+flat() / flatMap()	    Flatten nested arrays
+
+
+Method	         Purpose	                       Returns a New Array?	   Used for Transformation?	 Can Accumulate?  Side Effects?
+
+map()	    Transform each element	                      ✅ Yes	                    ✅ Yes	            ❌ No	    ❌ No
+filter()	Filter elements based on condition	          ✅ Yes	                    ❌ No	            ❌ No	    ❌ No
+reduce()	Reduce to a single value	                  ❌ No (can return any type)✅ Yes	            ✅ Yes	    ❌ No
+forEach()	Run a function on each item	                  ❌ No	                    ❌ No	            ❌ No	    ✅ Yes
+
+
+
+
+⚠️ find() vs filter()
+// Method               |                Returns                     |       Finds one or many?
+
+// find()               |    First matching element or undefined     |             🔍 One
+// filter()             |      Array of all matching elements        |             🔎 Many

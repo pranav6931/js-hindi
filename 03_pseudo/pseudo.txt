@@ -1,0 +1,21 @@
+1) palendrome
+2) Prime
+3) fibonacci
+4) reverse
+5) compress (r4t1i2)
+6) Find unique Ele in array (2 array as input) : 2 ways to solve
+7) frequencies (output : ['1:2', '3:5', '6:2', '4:2'])
+8) Find Duplicates in array
+9) Find Largest no.
+10) print unique key value pair form 2 objects and sum if duplicate
+11) make flat array
+12) print first non-repeating char
+13) transform even numbers capital of string
+14) move char to end
+15) distinct and duplicate values of array
+16) Factorial of number
+17) Sorting array
+18) transform string to Title case
+19) Finding anagrams strings ( ["code", "aaagmnrs", "anagrams", 'doce'] )
+20) finding the unique deveice names from array of strings (["mixer", "toaster", "mixer", 'mixer','toaster'])
+21) 

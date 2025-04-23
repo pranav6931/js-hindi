@@ -1,0 +1,18 @@
+// Prime
+console.log("eegr");
+
+// function isPrime(num){
+//   // phase 1 : num shold not less then 2 
+//   if(num < 2){
+//     return false;
+//   }
+//   // phase 2 : need to make dividers and divide with num and check its modules 0 or not
+//   for(i=2; i<num; i++){
+//     if(num%i == 0){
+//         return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(isPrime(29));

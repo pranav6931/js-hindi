@@ -1,0 +1,11 @@
+1) variable
+2) Data Type 
+3) Print - console.log() , console.table([ , , , ])
+4) Operator 
+     for checking dataType - typeOf(), 
+     for converting dataType - Number(), Boolean(), String(), 
+5) compare == ===
+
+6) 
+
+++ check string methods 
