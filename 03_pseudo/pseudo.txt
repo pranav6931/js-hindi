@@ -1,3 +1,8 @@
+NOTE :
+- look every time whenever I write pseudo code then I directly call that function on console.log. that is fine in case of function 
+return something, if not then plz call function directly. else it will give undefined at first 
+## check once 21 no pseudo 
+
 1) palendrome
 2) Prime
 3) fibonacci
