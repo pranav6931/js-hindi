@@ -47,6 +47,30 @@ arr3.forEach(ele =>{
 console.log(forEachModify);                                   //  [2,  4,  6, 8, 10, 12, 14]
 
 
+// now array object
+const myArrayObject = [
+    {
+        languageName : 'javascript',
+        fileNAme : 'js'
+    },
+    {
+        languageName : 'html',
+        fileNAme : 'html'
+    },
+    {
+        languageName : 'text',
+        fileNAme : 'txt'
+    },{
+        languageName : 'excel sheet',
+        fileNAme : 'xlsx'
+    }
+];
+
+myArrayObject.forEach(item => {
+    console.log( `language name  : ${item.languageName}`);
+});
+
+
 // ⚠️ Common mistake:
 // it does not return new array so how can we store it in a variable n, we can't ❌
 const result = [1, 2, 3].forEach(x => x * 2);

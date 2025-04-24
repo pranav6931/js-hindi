@@ -33,7 +33,7 @@
       myStack1 = "1000gb";
       
       console.log(`myStack value is : ${myStack}`);   // 85gb
-      console.log(`myStack1 value is : ${myStack1}`);  // 1000gb    that means in heap memorymake a copy of orignal value and do changes 
+      console.log(`myStack1 value is : ${myStack1}`);  // 1000gb    that means in heap memory make a copy of orignal value and do changes 
 
 // 2) Non-Primitive
     //   - Array, Object, function   ( in sbka return type Object hi ata hain)
@@ -73,16 +73,16 @@ console.log(`my name is ${userName} and score is ${userScore}`);
 // How to declare String 
 
 let myName = "pranav";                   // 1st syntax to declare
-let myAltName = new String('Tiku');   // 2ns syntax to declare   // paste this to browser console and
+let myAltName = new String('Tiku');      // 2ns syntax to declare   // paste this to browser console and
                                                       
-console.log(typeof(myName));        // string
-console.log(typeof(myAltName));     // object
+console.log(typeof(myName));             // string
+console.log(typeof(myAltName));          // object
 
-console.log(myName);        // pranav
-console.log(myAltName);     // [String: 'Harshal']
+console.log(myName);                     // pranav
+console.log(myAltName);                  // [String: 'Harshal']
 
-console.log(myName.length);        // 6
-console.log(myAltName.length);     // 7
+console.log(myName.length);              // 6
+console.log(myAltName.length);           // 7
 
 
 // type conversion
