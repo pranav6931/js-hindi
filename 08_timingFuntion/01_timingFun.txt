@@ -1,0 +1,27 @@
+All timing functions (like setTimeout, setInterval) are not built into the JavaScript language itself — 
+they are provided by the JavaScript runtime environment, which is:
+- The Browser (like Chrome, Firefox — which provide Web APIs like DOM, Timers)
+- Node.js (for server-side execution — provides its own set of APIs including Timers)
+
+Feature	                              Language Core (JavaScript)	Provided by Runtime
+setTimeout	                                     ❌	                       ✅ (Browser/Node.js)
+fetch	                                         ❌	                       ✅ (Browser)
+console.log	                                     ❌	                       ✅ (Both)
+Loops (for, while)	                             ✅	                       ❌
+Functions, closures	                             ✅	                       ❌
+fs (File System)	                             ❌	                       ✅ (Node.js only)
+
+JS is just the language, but things like timers, DOM, file systems, HTTP servers come from the runtime.
+If you ever want to test this, you can open a Node.js terminal and try setTimeout() — it works there too!
+
+
+🌐 In the Browser (Client-side JavaScript):
+
+   Function	                         Description
+setTimeout()	                         Delays a function once
+setInterval()	                         Repeats a function after intervals
+clearTimeout()	                         Cancels a timeout
+clearInterval()	                         Cancels an interval
+requestAnimationFrame()	                 Syncs with browser repaint (animations)
+cancelAnimationFrame()	                 Cancels animation frame
+performance.now()	                     High-res time for performance measuring
