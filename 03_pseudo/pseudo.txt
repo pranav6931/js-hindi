@@ -7,7 +7,7 @@ return something, if not then plz call function directly. else it will give unde
 2) Prime
 3) fibonacci
 4) reverse
-5) compress (r4t1i2)
+5) compress (r4t1i2) - input rrrruuutttppp
 6) Find unique Ele in array (2 array as input) : 2 ways to solve
 7) frequencies (output : ['1:2', '3:5', '6:2', '4:2'])
 8) Find Duplicates in array
