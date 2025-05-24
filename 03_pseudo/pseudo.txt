@@ -9,18 +9,24 @@ return something, if not then plz call function directly. else it will give unde
 4) reverse
 5) compress (r4t1i2) - input rrrruuutttppp
 6) Find unique Ele in array (2 array as input) : 2 ways to solve
-7) frequencies (output : ['1:2', '3:5', '6:2', '4:2'])
-8) Find Duplicates in array
+7) frequencies (output : ['1:2', '3:5', '6:2', '4:2']), input [1, 1, 1, 5, 8, 8, 8, 9, 9, 0, 0, 6, 5, 4]
+8) Find Duplicates in array || console.log(duplicates([3,3,3,4,5,6,6,6,8,8]))
 9) Find Largest no.
 10) print unique key value pair form 2 objects and sum if duplicate
-11) make flat array
-12) print first non-repeating char
+            const obj1 = { a: 2, b: 5, c: 10 };
+            const obj2 = { b: 6, c: 5, e: 10 };
+            console.log(uniquePair(obj1, obj2));
+11) make flat array  || console.log(flattenArray([2,[3,4,2,[4,6,8],9],[0,3],9,5]));
+12) print first non-repeating char || console.log(nonrepeating("eeeerrrtyydfff"))
 13) transform even numbers capital of string
 14) move char to end
 15) distinct and duplicate values of array
 16) Factorial of number
-17) Sorting array
+17) Sorting array || console.log(sorting([5, 3, 8, 0, 1, 2]));
 18) transform string to Title case
 19) Finding anagrams strings ( ["code", "aaagmnrs", "anagrams", 'doce'] )
 20) finding the unique deveice names from array of strings (["mixer", "toaster", "mixer", 'mixer','toaster'])
-21) 
+21) 1.	Start counting from 1 to n.
+    2.	Print each number after a delay of i * 1000ms (where i is the current number).
+22) 3.	Return a Promise that resolves when counting is complete.
+23) 
