@@ -9,3 +9,10 @@
 6) 
 
 ++ check string methods 
+
+
+Var - has global scoope or function scope 
+Direct if condition it will work ( bcz it's global scope)
+
+Let & const - block scope / func scope 
+Direct if it is not work

@@ -43,7 +43,7 @@ console.log(myObj);                 // age is 28 -- not modified
  console.log(myObj1[mySym]);
  console.log(myObj1);
 
- // how to add key as a function
+ // how to assign function in key
  myObj1.jsUserFun = function() {
     console.log('I am function');
  }
@@ -79,9 +79,9 @@ const mobileUser = {
    location : 'nagpur',
    sim : 2
 }
-console.log(Object.keys(mobileUser));
-console.log(Object.values(mobileUser));
-console.log(Object.entries(mobileUser));
+console.log(Object.keys(mobileUser));    // [ 'id', 'name', 'location', 'sim' ]
+console.log(Object.values(mobileUser));   // [ 165468, 'pranav', 'nagpur', 2 ]
+console.log(Object.entries(mobileUser));   // [ [ 'id', 165468 ], [ 'name', 'pranav' ], [ 'location', 'nagpur' ], [ 'sim', 2 ] ]
 
 // agar humne kuch property search karna ho toh 
 console.log(mobileUser.hasOwnProperty('sim'));           // true

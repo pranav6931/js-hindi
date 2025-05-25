@@ -101,6 +101,8 @@ for (const [key, value] of map) {
 //   console.log(key, obj[key]);
 // }
 
+// Object ke keys,vvalues and entries ko iterate kar skte hain kyoki ye array me convert ho jate hain - check below
+
 const carObj = {
     'name' : 'Punch',
     'model' : '2012',
@@ -136,7 +138,7 @@ for (const key in carObject) {
 }
 
 //💥 ab tumko lag rha hoga ki kya array ko bhi for in se iterate kar skte hian, ha kar toh sakte hian 
-//💥but key me index value milti hain , phir key ki help se index value nikalna pdta hain 
+//💥 but key me index value milti hain , phir key ki help se index value nikalna pdta hain 
 
 // for in in array      
 const myArray2 = ['ram', 'shyam', 'geeta', 'raj'];

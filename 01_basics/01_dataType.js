@@ -73,7 +73,7 @@ console.log(`my name is ${userName} and score is ${userScore}`);
 // How to declare String 
 
 let myName = "pranav";                   // 1st syntax to declare
-let myAltName = new String('Tiku');      // 2ns syntax to declare   // paste this to browser console and
+let myAltName = new String('Tiku');      // 2ns syntax to declare   // paste this to browser console and check all string method
                                                       
 console.log(typeof(myName));             // string
 console.log(typeof(myAltName));          // object
@@ -93,7 +93,7 @@ y = Number(x);
 
 console.log(`typeof of y is : ${typeof(y)} and it's value is : ${y}`);
 
-// Using Number() we can convert strign to number 
+// Using Number() we can convert string to number 
 // "33" ==> 33
 // "33a" ==> NaN
 // true ==> 1
