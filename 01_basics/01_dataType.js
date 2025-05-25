@@ -36,7 +36,7 @@
       console.log(`myStack1 value is : ${myStack1}`);  // 1000gb    that means in heap memory make a copy of orignal value and do changes 
 
 // 2) Non-Primitive
-    //   - Array, Object, function   ( in sbka return type Object hi ata hain)
+    //   - Array, Object, function, null   ( in sbka return type Object hi ata hain)
 
     // Non-Primitive DataType me Heap memory use hoti hian
 
@@ -59,7 +59,7 @@
    // https://262.ecma-international.org/5.1/#sec-11.4.3    
 
 
-// String Interpolation   
+// String Interpolation   OR  template Literal
 
 let userName = "ram";
 let userScore = 60;

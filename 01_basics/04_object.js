@@ -14,20 +14,64 @@
  }
 
  console.log(myObj.age);
- console.log(myObj['location']);       // why we need this syntax to print 
-//  console.log(myObj.full name);         // bcz this type of key U can't access using dot(.) bcz key has on empthy space
- console.log(myObj["full name"]);       // U have to use [ ] for this.
+ //  console.log(myObj[location]);         // this will not work
+
+ console.log(myObj['location']);           // why we need this syntax to print if we can access using dot ( check below )
+//  console.log(myObj.full name);          // bcz this type of key U can't access using dot(.) bcz key has on empthy space
+ console.log(myObj["full name"]);          // U have to use [ ] for this.
 
 // to change value
 myObj.age = 28;
 console.log(myObj.age);
 
-// how to freez an object, so that no one can change the value
+// how to freez an object, so that no one can add, modify, delete
 Object.freeze(myObj);
 myObj.age = 26;
-console.log(myObj);                 // age is 28 -- not modified
+console.log(myObj.age);                               // age is 28 -- not modified
+myObj.newProperty = "new property value";    
+console.log(myObj.newProperty);                       // undefined -- not added new property 
+delete myObj.age  
+console.log(myObj.age);                               //  age is 28 -- not deleted
 
- // how to add symbol as key in Object 
+// how to seal an object, so that no one can add and delete but can modify
+// Object.seal(myObj)
+
+// | Feature                         | `Object.freeze()`  | `Object.seal()` |
+// | ------------------------------- | -----------------  | --------------- |
+// | Add new properties              | ❌ No              | ❌ No            |
+// | Delete properties               | ❌ No              | ❌ No            |
+// | Modify existing property values | ❌ No              | ✅ Yes           |
+// | Modify property descriptors     | ❌ No              | ❌ No            |
+// | Object is immutable             | ✅ Fully           | 🚫 Partially    |
+
+// Mutable vs Immutable
+// mutable (modifies orignal) vs Immutable (not-modifies orignal)
+
+// Mutable  - Object, Array, Function
+let object1 = { name: "Alice" };
+let object2 = object1;              // object2 references the same object as obj1
+object2.name = "Bob";
+
+console.log(object1.name);          // "Bob"
+console.log(object2.name);          // "Bob"
+
+// Immutable  - string, number, boolean, null, undefined, Symbol, BigInt
+let a = 20;
+let b = a;                          // b gets a *copy* of the value in a
+b = 30;                             // changing b doesn't affect a
+console.log(a);                     // 20
+console.log(b);                     // 30
+
+
+// | Concept      | Mutable                           | Immutable                         |
+// | ------------ | --------------------------------- | --------------------------------- |
+// | What happens | Modifies the original object      | Creates a new object              |
+// | Risk         | Can cause bugs and side effects   | Safer, more predictable           |
+// | Angular use  | Can cause missed change detection | Works well with `OnPush` strategy |
+
+
+
+// how to add symbol as key in Object 
 
  const mySym = Symbol("key1");
 

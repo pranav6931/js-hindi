@@ -1,6 +1,6 @@
 const myArray = [1,2,3,4,5];
 
-console.log(myArray[3]);  // indexing start with 0
+console.log(myArray[3]);                // indexing start with 0   - o/p : 4
 
 // using new keyword to define array
 const myArrayNew = new Array(7,8,9,10);
@@ -46,26 +46,29 @@ console.log('After splice array is modified  ' + myArrSplice);
 
 const firstArray = ['ram', 'shyam', 'geeta'];
 const secondArray = ['babita', 'jetha', 'tappu'];
-
+   // 1st way
 const concatArray = firstArray.concat(secondArray);
 console.log(concatArray);
-
+   // 2nd way
 const spreadArray = [...firstArray, ...secondArray];
 console.log(spreadArray);
 
-//////////////////////////// when lots of array inside array 
+//////////////////////////// when lots of array inside array //////////////////////////////////
 const anotherArray = [5,5,8,9,[5,5,8,6,8], 8,89,3,6,7, [87,6,9,[87,8,9,5],85]];
 const realArray = anotherArray.flat(Infinity);
 console.log(realArray);
 
 // check array
-console.log(Array.isArray("pranav"));
+console.log(Array.isArray("pranav"));              // false
 // convert array
-console.log(Array.from("pranav"));
+console.log(Array.from("pranav"));                 // [ 'p', 'r', 'a', 'n', 'a', 'v' ]
+// we have string method too for the same
+console.log(("pranav").split(""));                 // [ 'p', 'r', 'a', 'n', 'a', 'v' ]
+
 
 // convert string to array
 const score1 = 100;
 const score2 = 200;
 const score3 = 300;
 
-console.log(Array.of(score1,score2,score3));
+console.log(Array.of(score1,score2,score3));       // [ 100, 200, 300 ]
