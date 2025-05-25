@@ -25,8 +25,8 @@ Number.isNaN(NaN);       // true ✅ (preferred way)
 
 // 2. 🧠 isNaN() vs Number.isNaN()
 
-isNaN("hello"); // true ❌ (coerces the value)
-Number.isNaN("hello"); // false ✅ (checks properly)
+isNaN("hello");                 // true ❌ (coerces the value)
+Number.isNaN("hello");          // false ✅ (checks properly)
 
 
 // 🔍 Why does NaN exist?

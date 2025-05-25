@@ -3,7 +3,7 @@
 // it return new array with fewer elements
 
 //   array.filter((item, index, array) => {
-//     return condition; // should return true or false // after that it return array
+//     return condition; // based on return true or false it return array
 //   });
 
 
