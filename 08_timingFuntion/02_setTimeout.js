@@ -21,6 +21,11 @@ function myFun1(name){
     console.log(`my name is : ${name}`)
 }
 
+// 4rd way
+setTimeout((name) =>{
+    console.log("main hu don 2 "+ name);
+},2000, 'kallu')
+
 
 // ✅ Think of it like:
 // You’re setting a reminder (via setTimeout), but then canceling it (via clearTimeout) before it rings.

@@ -5,7 +5,7 @@
 //5) type conversion
 //6) Symbol data type
 
-// Dynamic ststic weakly strongly
+// Dynamic static weakly strongly
   // Dynamic Typed : Javascript ==> we can define number variable to string at runtime.
   // Static typed : Typescript ==> we can not define number variable to string at run time ( it will through error).
 

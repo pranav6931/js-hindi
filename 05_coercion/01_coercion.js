@@ -50,4 +50,10 @@ console.log(isNaN("hello"));        // true (because "hello" becomes NaN)
 console.log(isNaN("123"));          // false (coerced to number 123)
 console.log(isNaN(true));           // false (true becomes 1)
 console.log(isNaN(undefined));      // true (becomes NaN)
+console.log("abc" - 5);             // NaN
+console.log(5 - "abc");             // NaN
+console.log(NaN === NaN);           // false
+console.log(NaN == NaN);            // false
 
+
+console.log(typeof ("abc" - 5));     // number   ( because NaN type is number )

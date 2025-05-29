@@ -8,13 +8,13 @@
 //   });
 
 // using then catch 
-fetch('https://jsonplaceholder.typicode.com/users').then((res) => {
-    return res.json();
-}).then((users) => {
-    console.log(users)
-}).catch((error) => {
-    console.log(error)
-})
+// fetch('https://jsonplaceholder.typicode.com/users').then((res) => {
+//     return res.json();
+// }).then((users) => {
+//     console.log(users)
+// }).catch((error) => {
+//     console.log(error)
+// })
 
 // using async await - try catch
 async function getUserDetail() {
