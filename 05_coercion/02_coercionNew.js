@@ -231,7 +231,8 @@ console.log("hello" && 123);      // 123
 console.log(null || "fallback");  // "fallback"
 console.log(undefined && "test"); // undefined
 
-
+console.log(1<2<3)                  // true
+console.log(3>2>1)                  // false
 
 
 
