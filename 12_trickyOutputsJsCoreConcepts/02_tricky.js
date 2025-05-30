@@ -20,7 +20,7 @@ const c2 = { key: "c2" };
 a2[b2] = 123;
 a2[c2] = 456;
 
-console.log(a[b]);                            // output: 456 (b and c both become "[object Object]")
+console.log(a2[b2]);                            // output: 456 (b and c both become "[object Object]")
 
 
 // 🔥 3. typeof null quirk + NaN truthiness
@@ -30,6 +30,13 @@ console.log(null instanceof Object);                  // output: false
 
 console.log(!!NaN);                           // output: false
 console.log(NaN == NaN);                      // output: false
+
+
+function Person() {}
+const p = new Person();
+
+console.log(p instanceof Person); // true
+console.log(p instanceof Object); // true
 
 
 // 🔥 4. this in setTimeout

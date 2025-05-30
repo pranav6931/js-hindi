@@ -19,7 +19,10 @@ console.log(5 - 'abc')                   // NaN
 
 console.log(1 + "2" + 3);                // "123"
 console.log(1 + +"2" + 3);               // 6
+console.log(1 + +"2" + "3");               // 33
 console.log("10" - - "10");              // 20
+console.log("10" - - 10);               // 20
+console.log(10 - - '10');               // 20
 console.log('')
 
 // Infinity and Edge Numbers
@@ -65,6 +68,10 @@ console.log([1,2] + 3);                  // "1,23"
 
 console.log({x:1, y:4} + {y:1, z:4} )    // [object Object] [object Object]
 console.log({x:1, y:4} - {y:1, z:4} )    // NaN
+
+// 🧠 Summary:
+// "object" = lowercase → refers to the internal type
+// "Object" = uppercase → refers to the constructor function name
 
 console.log(true + true)                  // 2
 console.log(true - true)                  // 0
@@ -113,6 +120,7 @@ console.log( [1,2] == [1,2] )              // false
 console.log([] == ![]);                    // true
 console.log([] == 0);                      // true
 console.log([] == false);                  // true
+console.log(![] == false);                  // true
 console.log('')
 
 console.log({} == {});                     // false
@@ -176,8 +184,9 @@ console.log(isNaN("hello"));             // true
 console.log(isNaN("123"));               // false
 console.log(isNaN(true));                // false
 console.log(isNaN(undefined));           // true
-console.log(isNaN([]));                  // false
-console.log(isNaN({}));                  // true
+console.log(isNaN([]));                  // false      //  ye 0 me convert ho jata 
+console.log(isNaN({}));                  // true       // ye NaN me 
+
 console.log(Number("hello"));            // NaN
 console.log(Number(true));               // 1
 console.log(Number(false));              // 0
@@ -220,20 +229,67 @@ console.log(Boolean("false"));    // true
 console.log('parseInt vs Number')
 console.log(parseInt("42px"));    // 42
 console.log(Number("42px"));      // NaN
-console.log(parseInt("08"));      // 8
-console.log(parseInt("0x10"));    // 16
-console.log(Number("0x10"));      // 16
+console.log(parseInt("08"));      // 8 
+console.log(parseInt("0x10"));    // 16            "0x" prefix tells JavaScript the number is in hex. Hexadecimal digits go from 0 to 9 and then a to f
+console.log(Number("0x10"));      // 16            "10" in hex means 1 × 16 + 0 = 16 in decimal.
 console.log('')
 
 
 // Logical Operators (return values, not just booleans)
-console.log("hello" && 123);      // 123
-console.log(null || "fallback");  // "fallback"
-console.log(undefined && "test"); // undefined
+console.log("hello" && 123);            // 123
+console.log(null || "fallback");        // "fallback"
+console.log(undefined && "test");       // undefined
 
-console.log(1<2<3)                  // true
-console.log(3>2>1)                  // false
+//
+console.log(1<2<3)                      // true
+console.log(3>2>1)                      // false
 
 
 
 
+// remember
+// 1) null ka compair hote samay use 0 consider kiya jata hain  # in case of number only
+// | Operation Type              | Coercion Rule                                                     | Example         | Result  |
+// | --------------------------- | ----------------------------------------------------------------- | --------------- | ------- |
+// | Arithmetic (`+`, `-`, etc.) | `null` becomes `0`                                                | `null + 1`      | `1`     |
+// | Equality (`==`)             | 🟠`null == undefined` is `true` <br> but not equal to anything else | `null == 0`     | `false` |
+// | Strict Equality (`===`)     | No coercion; type and value must match                            | `null === null` | `true`  |
+// | Boolean context             | `null` is falsy                                                   | `if (null)`     | false   |
+
+// 2)undefine ko compair krte samay wo smjo kuch bhi nahi ke sath deal kr rhe ho , use number ke sath use kroge to NaN aayega, 
+// use aur ksisi ke sath use kroge to wo conact ho jayea lekin kisi value me convart nhi hoga bcz it is nothing
+// | **Context**             | **Behavior / Rule**                      | **Example**               | **Result**    |
+// | ----------------------- | ---------------------------------------- | ------------------------- | ------------- |
+// | Arithmetic operations   | `undefined` becomes `NaN` (Not a Number) | `undefined + 1`           | `NaN`         |
+// | Equality (`==`)         | `undefined == null` is `true`            | `undefined == null`       | `true`        |
+// | Strict Equality (`===`) | Only equals itself                       | `undefined === undefined` | `true`        |
+// | Boolean context         | `undefined` is **falsy**                 | `if (undefined)`          | false         |
+// | typeof                  | Returns the string `'undefined'`         | `typeof undefined`        | `"undefined"` |
+
+
+// 3) + and -
+// | Operator        | Behavior                                   | Example    | Result |
+// | --------------- | ------------------------------------------ | ---------- | ------ |
+// | `+`             | String concat if any operand is string     | `"5" + 1`  | `"51"` |
+// | `+`             | Otherwise, converts to numbers             | `true + 1` | `2`    |
+// | `-` `*` `/` `%` | Always convert operands to numbers         | `"5" - 1`  | `4`    |
+
+
+// 4) empty string has no characters, JavaScript treats it as nothing = 0.
+
+// 5) [] is a truthy value.
+// ![] becomes false
+// [] == false  // Now it becomes this.
+
+// 6) {} is truthy, so !{} becomes false.
+// {} == false
+
+// 7) empthy string are false
+// space in string that is true
+
+// 8) The + operator, when used with non-numeric operands, performs string concatenation.
+// An empty array [] is coerced to an empty string "" when used in a string context.
+
+// The - operator performs numeric subtraction.
+// Both arrays [] are coerced to numbers:
+// Number([]) results in 0.

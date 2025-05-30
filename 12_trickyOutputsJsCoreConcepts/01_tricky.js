@@ -35,6 +35,7 @@ const z = 15;
 console.log(a);           // output: 10
 // console.log(b);        // ReferenceError: b is not defined
 
+//
 function test() {
   var x = 1;
 }
@@ -58,20 +59,21 @@ let a = 100;
 }
 console.log(a);           // output: 100
 
-
+//
 var b1 = 100;
 
 {
   let b1 = 200;
-  console.log(b);         // output: 200
+  console.log(b1);         // output: 200
 }
-console.log(b);   
+console.log(b1);        // output: 100
 
 
 // 🔵 7. var inside loop (not block scoped)
 for (var i = 0; i < 3; i++) {}
 console.log(i);           // output: 3
 
+//
 for (let j = 0; j < 3; j++) {}
 // console.log(j);        // ReferenceError: j is not defined
 
@@ -83,8 +85,8 @@ hoisted();                // output: "Hoisted"
 function hoisted() {
   console.log("Hoisted");
 }
-//
 
+//
 notHoisted();             // TypeError: notHoisted is not a function
 var notHoisted = function () {
   console.log("Not hoisted");
@@ -114,12 +116,13 @@ console.log(person2.getName()); // output: undefined (arrow function doesn't bin
 for (var i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 100);
 }
-// output: 3 3 3
+                                                 // output: 3 3 3
+                                                //  ok due to 3 iteration setTimeout executes 3 times but at the time of execution the current value of i is 3 so it prints 3 3 3 (even if u set time as 0the output will be same )
 
 for (let j = 0; j < 3; j++) {
   setTimeout(() => console.log(j), 100);
 }
-// output: 0 1 2
+                                                 // output: 0 1 2
 
 
 // 🔴 11. Redeclaration & Scope Conflicts
@@ -128,21 +131,7 @@ let a = 10;
 
 var b2 = 10;
 var b2 = 20;
-console.log(b);           // output: 20
-
-
-// 🟡 12. Function hoisting vs function expression
-
-foo();                   // output: "Hello"
-
-function foo() {
-  console.log("Hello");
-}
-
-bar();                   // TypeError: bar is not a function
-var bar = function () {
-  console.log("Hi");
-};
+console.log(b2);           // output: 20
 
 
 // 🟠 13. Default parameter values with var scope
