@@ -57,3 +57,5 @@ console.log(NaN == NaN);            // false
 
 
 console.log(typeof ("abc" - 5));     // number   ( because NaN type is number )
+console.log(1<2<3)                  // true
+console.log(3>2>1)                  // false
