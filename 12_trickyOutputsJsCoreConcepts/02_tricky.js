@@ -31,7 +31,8 @@ console.log(null instanceof Object);                  // output: false
 console.log(!!NaN);                           // output: false
 console.log(NaN == NaN);                      // output: false
 
-
+//see what's this 
+////  object instanceof Constructor
 function Person() {}
 const p = new Person();
 
@@ -53,6 +54,31 @@ let obj = {
 
 obj.increment();                              // output: NaN (because `this` is window/global, not `obj`)
 
+// direct inside function use this
+let obj1 = {
+  count: 0,
+  increment: function () {
+      this.count++;
+      console.log(this.count);
+  }
+};
+
+obj1.increment();                              // 1
+
+
+// in arrow fun
+let obj2 = {
+  count: 0,
+  increment: function () {
+    setTimeout(() => {
+      this.count++;
+      console.log(this.count);
+    }, 100);
+  }
+};
+
+obj2.increment();                                 // 1
+
 
 // 🔥 5. Implicit coercion trap with ==
 
@@ -62,25 +88,9 @@ console.log([] == ![]);                       // output: true
 
 
 // 🔥 6. typeof weirdness
+ 
+console.log(typeof typeof 1);                 // output: "string"        ==> typeof "number"  ==> string
 
-console.log(typeof typeof 1);                 // output: "string"
-
-
-// 🔥 7. IIFE and closures with let
-
-for (let i = 0; i < 3; i++) {
-  (function () {
-    setTimeout(() => console.log(i), 100);
-  })();
-}
-                                               // output: 0 1 2
-
-for (var i = 0; i < 3; i++) {
-  (function (j) {
-    setTimeout(() => console.log(j), 100);
-  })(i);
-}
-                                                // output: 0 1 2
 
 
 // 🔥 8. Function parameter + default + hoisting
@@ -98,7 +108,7 @@ foo();
 // 🔥 9. Short-circuit evaluation tricks
 
 const val = null || undefined || "Hello";
-console.log(val);                                // output: "Hello"
+console.log(val);                                // output: "Hello"   == > The || (logical OR) operator returns the first truthy value it finds, or the last value if all are falsy.
 
 
 // 🔥 10. Optional chaining and nullish coalescing
@@ -138,3 +148,12 @@ let b = a;
 let c = b;
 c.x = 5;
 console.log(a.x);                                                    // output: 5
+
+
+// see how to tell number is immutable  ( string also do the same)
+let x = 5;
+let y = x;
+y = y + 2;
+
+console.log(x); // 5
+console.log(y); // 7

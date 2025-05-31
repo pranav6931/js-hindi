@@ -23,6 +23,20 @@ console.log(1 + +"2" + "3");               // 33
 console.log("10" - - "10");              // 20
 console.log("10" - - 10);               // 20
 console.log(10 - - '10');               // 20
+//
+console.log(12+ 12)                      // 24
+console.log(12+ "12")                    //1212
+console.log(12+ +"12")                    //24
+
+console.log(12- 12)                    //0
+console.log(12- "12")                    //0
+console.log(12- -"12")                    //24
+
+console.log(12+ -12)                    //0
+console.log(12+ -"12")                    //0
+
+console.log(12- +12)                    //0
+console.log(12- +"12")                    //0
 console.log('')
 
 // Infinity and Edge Numbers
@@ -131,6 +145,18 @@ console.log('')
 
 console.log("" == 0);             // true
 console.log("" === 0);            // false
+
+// ==================================== equal coercion ==============================
+
+var a = 12;
+var b = "12";
+a == b // Returns true because both 'a' and 'b' are converted to the same type and then compared. Hence the operands are equal.
+
+var a = 226;
+var b = "226";
+
+a === b // Returns false because coercion does not take place and the  operands are of different types. Hence they are not equal.
+// ==================================================================
 
 
 // Boolean
@@ -244,6 +270,27 @@ console.log(undefined && "test");       // undefined
 console.log(1<2<3)                      // true
 console.log(3>2>1)                      // false
 
+
+// 
+// =================================== Boolean coersion
+var x = 220;
+var y = "Hello";
+var z = undefined;
+        
+console.log(x || y )   // Returns 220 since the first value is truthy          ### 🔹 OR operator (`||`) — returns the **first truthy** value it finds:
+console.log(x || z)   // Returns 220 since the first value is truthy
+
+console.log(x && y)    // Returns "Hello" since both the values are truthy    🔹 AND operator (&&) — returns the first falsy value, or the last value if all are truthy:
+console.log(y && z)   // Returns undefined since the second value is falsy
+        
+if( x && y ){ 
+  console.log("Code runs" ); // This block runs because x && y returns "Hello" (Truthy)
+}   
+        
+if( x || z ){
+  console.log("Code runs");  // This block runs because x || y returns 220(Truthy)
+}
+// ================================================================
 
 
 
