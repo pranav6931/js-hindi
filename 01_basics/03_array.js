@@ -16,12 +16,12 @@ console.log(myArrayNew[0]);
 // console.log(myArray);
 
 // let arrInc = myArray.includes(2);
-let arrInc = myArray.indexOf(3);
+let arrInc = myArray.indexOf(3);                  // checking index of 3 
 console.log(arrInc);
 
 // to convert in string ( bind and string )
 let arrJoin = myArray.join();
-console.log(arrJoin);             // 1,2,3,4,5   it's typeOf is string 
+console.log(arrJoin);                            // 1,2,3,4,5   it's typeOf is string 
 
 
 //  Slice

@@ -1,6 +1,6 @@
 
-console.log(Math.round(2.3));
-console.log(Math.random());      // 0 to 1 ke bich me value aayegi randomely
+console.log(Math.round(2.3));                   // 2
+console.log(Math.random());                     // 0 to 1 ke bich me value aayegi randomely
 
 //  Date
 let myDate = new Date();
@@ -24,11 +24,12 @@ console.log(gameCounter);
     // ( ++x : ++ is increment , x is value. so here x is after the increment so value should be after the increment)
 
 let x = 10;
-console.log(`x:${x}`);   // 10
+console.log(`x:${x}`);                              // 10
 const y = x++;
-console.log(`x:${x} and y:${y}`);  // 11 and 10
+console.log(`x:${x} and y:${y}`);                   // 11 and 10
 
 
 let v = 10;
+console.log(`v:${v}`);                               // 10
 const w = ++v;
-console.log(`${v} and ${w}`);   // 11 and 11
+console.log(`${v} and ${w}`);                        // 11 and 11
