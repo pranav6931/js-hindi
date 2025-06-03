@@ -1,4 +1,4 @@
-//1) Dynamic ststic weakly strongly
+//1) Dynamic static weakly strongly
 //2) Data Type with stack and heap memory 
 //3) String Interpolation  
 //4) How to declare String 

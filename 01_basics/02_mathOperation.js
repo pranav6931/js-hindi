@@ -1,6 +1,7 @@
 
 console.log(Math.round(2.3));                   // 2
 console.log(Math.random());                     // 0 to 1 ke bich me value aayegi randomely
+console.log(Math.floor(5.95));                  // Expected output: 5
 
 //  Date
 let myDate = new Date();

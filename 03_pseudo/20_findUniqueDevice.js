@@ -3,11 +3,11 @@
 function deviceNamesSystem(devicenames) {
     // Write your code here
     let uniqueDevicenames = [];
-    count = {};
+    let count = {};
     devicenames.forEach((ele)=>{
         if(count[ele]) {
-            count[ele]+=1;
-            uniqueDevicenames.push(ele+(count[ele]-1))
+            count[ele] = count[ele] + 1;
+            uniqueDevicenames.push(ele + (count[ele]-1))
         } else {
           count[ele] = 1;
           uniqueDevicenames.push(ele)

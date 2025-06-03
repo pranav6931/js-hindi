@@ -200,6 +200,7 @@ console.log(typeof true);                      // "boolean"
 console.log(typeof ("abc" - 5));               // "number" (NaN is number)
 
 console.log(typeof Infinity);                  // "number"
+console.log(typeof typeof 1)                   // string
 
 
 // NaN Handling

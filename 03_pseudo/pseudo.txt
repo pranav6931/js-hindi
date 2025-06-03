@@ -34,4 +34,6 @@ return something, if not then plz call function directly. else it will give unde
 21) 1.	Start counting from 1 to n.
     2.	Print each number after a delay of i * 1000ms (where i is the current number).
 22) 3.	Return a Promise that resolves when counting is complete.
-23) 
+23) create individual array
+24) if vowels then print
+250 sum of digits

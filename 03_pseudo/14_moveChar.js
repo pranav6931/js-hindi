@@ -11,3 +11,6 @@ function moveChar(str){
     return iteration
 }
 console.log(moveChar('angular'));
+
+
+// code is erong check again 
