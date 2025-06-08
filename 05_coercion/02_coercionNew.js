@@ -1,3 +1,5 @@
+// 💥 think before you answer, 
+
 // Type Coercion
 console.log('Type Coercion')
 console.log('5' - true)                  // 4

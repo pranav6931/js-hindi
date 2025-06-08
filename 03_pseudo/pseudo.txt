@@ -1,7 +1,9 @@
 NOTE :
-- look every time whenever I write pseudo code then I directly call that function on console.log. that is fine in case of function 
+💥look every time whenever I write pseudo code then I directly call that function on console.log. that is fine in case of function 
 return something, if not then plz call function directly. else it will give undefined at first 
 ## check once 21 no pseudo 
+💥First ask your self what you want to achieve, and how we can achieve, dont waste time to try an error in code. clear mind first don't take
+pressure think before act.
 
 1) palendrome
 2) Prime
@@ -36,4 +38,10 @@ return something, if not then plz call function directly. else it will give unde
 22) 3.	Return a Promise that resolves when counting is complete.
 23) create individual array
 24) if vowels then print
-250 sum of digits
+25) sum of digits
+26) print the count of vowels in an array and print vowels  // const testStrings = ['i', 'r', 't', 'a', 'b', 'y', 'i', 'm'];
+27) Count frequency of items in array Similar to this return the element with highest/second highest frequency
+28) string and a substring, count how many times the substring appears in the string.
+29) Find indexes of duplicated elements in the array
+30) ⁠questions around setTimeout and setInterval
+
