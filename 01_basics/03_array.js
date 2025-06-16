@@ -28,8 +28,8 @@ console.log(arrJoin);                            // 1,2,3,4,5   it's typeOf is s
 
 const myArrSlice = [9,8,7,4,5,6,3,2,1]
 console.log('A  ' + myArrSlice);
-console.log(myArrSlice.slice(2,5));      // 1st index no. ko pkdega aur 2nd index no. ke phle wale tak pkdega
-console.log(myArrSlice.slice(3,8));
+console.log(myArrSlice.slice(2,5));      // [ 7, 4, 5 ] // 1st index no. ko pkdega aur 2nd index no. ke phle wale tak pkdega
+console.log(myArrSlice.slice(3,8));      // [ 4, 5, 6, 3, 2 ]
 
 console.log('After slice array is same  ' + myArrSlice);
 
@@ -38,8 +38,14 @@ console.log('After slice array is same  ' + myArrSlice);
 const myArrSplice = [9,8,7,4,5,6,3,2,1]
 console.log('B  ' + myArrSplice);
 console.log(myArrSplice.splice(1,3));    // 1st index no. ko lena aur 2nd index no. tak ko kha lega
+console.log(myArrSplice.splice(2,5));    // [ 6, 3, 2, 1 ]
 
 console.log('After splice array is modified  ' + myArrSplice);
+
+// 🎤 Interview-Ready Answer:
+// slice() is non-destructive — it returns a new array with selected elements.
+// splice() is destructive — it changes the original array by removing or adding elements at a specific index.
+// Use slice() for copying, and splice() for modifying.
 
 
 // concat 2 arrays
