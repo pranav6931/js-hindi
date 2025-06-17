@@ -55,11 +55,11 @@ while (arr < myArr.length) {
 }
 
 // 4️⃣ do while : condition check hone phle ek bar to chlta hi hain ye 
-let score = 11;
+let score = 10;
 do {
     console.log(`score value : ${score}`);
     score = score + 1;
-} while (score < 10);
+} while (score < 20);
 
 // 5️⃣ for of loop : Iterating over values in arrays, strings, Maps, Sets  
 //     array, string, map

@@ -24,7 +24,7 @@
 myObj.age = 28;
 console.log(myObj.age);
 
-// how to freez an object, so that no one can add, modify, delete
+// how to freeze an object, so that no one can add, modify, delete
 Object.freeze(myObj);
 myObj.age = 26;
 console.log(myObj.age);                               // age is 28 -- not modified

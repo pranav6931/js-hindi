@@ -26,26 +26,31 @@ console.log(arrJoin);                            // 1,2,3,4,5   it's typeOf is s
 
 //  Slice
 
-const myArrSlice = [9,8,7,4,5,6,3,2,1]
-console.log('A  ' + myArrSlice);
-console.log(myArrSlice.slice(2,5));      // [ 7, 4, 5 ] // 1st index no. ko pkdega aur 2nd index no. ke phle wale tak pkdega
-console.log(myArrSlice.slice(3,8));      // [ 4, 5, 6, 3, 2 ]
+const arr = [1, 2, 3, 4, 5];
+const result = arr.slice(1, 4); // from index 1 to 3 (4 is excluded)
 
-console.log('After slice array is same  ' + myArrSlice);
+console.log(result); // [2, 3, 4]
+console.log(arr);    // [1, 2, 3, 4, 5]       (✅ original unchanged)
+
 
 //  Splice
 
-const myArrSplice = [9,8,7,4,5,6,3,2,1]
-console.log('B  ' + myArrSplice);
-console.log(myArrSplice.splice(1,3));    // 1st index no. ko lena aur 2nd index no. tak ko kha lega
-console.log(myArrSplice.splice(2,5));    // [ 6, 3, 2, 1 ]
+const arr = [1, 2, 3, 4, 5];
+const removed = arr.splice(1, 2); // remove 2 elements starting at index 1
 
-console.log('After splice array is modified  ' + myArrSplice);
+console.log(removed); // [2, 3]
+console.log(arr);     // [1, 4, 5] (❗ original modified)
+
+// ➕ Bonus: Add using splice()
+const arr = [1, 4, 5];
+arr.splice(1, 0, 2, 3); // at index 1, remove 0, insert 2, 3
+
+console.log(arr); // [1, 2, 3, 4, 5]
 
 // 🎤 Interview-Ready Answer:
-// slice() is non-destructive — it returns a new array with selected elements.
-// splice() is destructive — it changes the original array by removing or adding elements at a specific index.
-// Use slice() for copying, and splice() for modifying.
+// The slice() method returns a shallow copy of a portion of an array, without modifying the original array — it's non-destructive.
+// On the other hand, splice() modifies the original array by adding, removing, or replacing elements — it's destructive.
+// slice is great for copying or extracting, while splice is used for updates or deletions within the array.
 
 
 // concat 2 arrays
