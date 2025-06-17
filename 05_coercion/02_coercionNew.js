@@ -69,8 +69,8 @@ console.log([] + 1);                     // "1"
 
 console.log( {} )                        // {}
 console.log( {} + {} )                   // [object Object] [object Object]
-console.log( {} - {} )                   // NaN
-console.log({} + 1);                     // "[object Object]1"
+console.log( {} - {} )                   // NaN                                   - here minus(-) want to convert all as number so {} ==> "[object Object]" ==> NaN || NaN - NaN = NaN
+console.log({} + 1);                     // "[object Object]1"                    - here minus(+) want to convert all as number so {} ==> "[object Object]" || "[object Object]" + 1 = "[object Object]1"
 
 console.log( [] + {} )                   // [object Object]
 console.log( [] - {} )                   // NaN
@@ -78,7 +78,7 @@ console.log( {} + [] )                   // [object Object]
 console.log( {} - [] )                   // NaN
 
 console.log( [1,2] + [3,4] )             // [1,23,4]
-console.log( [1,2] - [3,4] )             // NaN
+console.log( [1,2] - [3,4] )             // NaN                                    - In the process of Number converting  [1,2] ==> "1,2" ==> NaN
 console.log( [1] + 1 );                  // "11"
 console.log([1,2] + 3);                  // "1,23"
 
@@ -135,18 +135,26 @@ console.log([] == []);                     // false
 console.log( [1,2] == [1,2] )              // false
 console.log([] == ![]);                    // true
 console.log([] == 0);                      // true
-console.log([] == false);                  // true
+console.log([] == false);                  // true                              - alreaay told you if anyone is boolean then convert it to number then false become 0 
+console.log([] == true);                   // false                              - alreaay told you if anyone is boolean then convert it to number then false become 0 
 console.log(![] == false);                  // true
 console.log('')
 
 console.log({} == {});                     // false
-console.log({} == !{});                    // false
+console.log({} == !{});                    // false                                NaN == 0
 console.log({} == 0);                      // false
 console.log({} == false);                  // false
 console.log('')               
 
-console.log("" == 0);             // true
-console.log("" === 0);            // false
+console.log("" == 0);                      // true
+console.log("" === 0);                     // false
+
+console.log([1] == 1)                       // true  ([1] → '1' → 1)
+console.log([] == 0)                        // true  ([] → '' → 0)
+console.log([null] == 0 )                   // true  ([null] → '' → 0)
+console.log([undefined] == 0)               // true  ([undefined] → '' → 0)
+console.log([] == '')                       // true
+console.log({} == '[object Object]')        // true
 
 // ==================================== equal coercion ==============================
 
@@ -164,20 +172,21 @@ a === b // Returns false because coercion does not take place and the  operands 
 // Boolean
 console.log('###### Boolean')
 console.log( null )                    // null
-console.log( !null )                   // true
+console.log( !null )                   // true                         // its falsy value so !false become true
 console.log( !!null )                  // false
 console.log( undefined )               // undefined
-console.log( !undefined )              // true
+console.log( !undefined )              // true                          // its falsy value so !false become true
 console.log( !!undefined )             // false
 console.log( NaN )                     // NaN
-console.log( !NaN )                    // true
+console.log( !NaN )                    // true                           // its falsy value so !false become true
 console.log( !!NaN )                   // false
 console.log('')       
 console.log( 0 )                       // 0
 console.log( !0 )                      // true
 console.log( !!0 )                     // false
 console.log( " " )                     // " "
-console.log( !" " )                    // false
+console.log( !"" )                     // true                          // empthy string is false ==> !false ==> true 
+console.log( !" " )                    // false                         // its string with space so its true ==? !true ==> false
 console.log( !!" " )                   // true
 console.log( "text" )                  // text
 console.log( !"text" )                 // false
@@ -228,7 +237,7 @@ console.log(+"123");              // 123
 console.log(+"123");              // 123
 console.log(+true);               // 1
 console.log(+false);              // 0
-console.log(!!"false");           // true
+console.log(!!"false");           // true                            // dont confuse it's simple string only 
 console.log(+null);               // 0
 console.log(+undefined);          // NaN
 console.log(+{});                 // NaN
@@ -265,8 +274,8 @@ console.log('')
 
 
 // Logical Operators (return values, not just booleans)
-console.log("hello" && 123);            // 123
 console.log(null || "fallback");        // "fallback"
+console.log("hello" && 123);            // 123
 console.log(undefined && "test");       // undefined
 
 //
@@ -343,3 +352,11 @@ if( x || z ){
 // The - operator performs numeric subtraction.
 // Both arrays [] are coerced to numbers:
 // Number([]) results in 0.
+
+
+// ✅ == Rules
+// 🔧 Rule 1: If both types are the same → compare directly
+// 🔧 Rule 2: If one is boolean → convert it to number
+// 🔧 Rule 3: If one is string and the other is number → convert string to number
+// 🔧 Rule 4: null and undefined are only equal to each other
+// 🔧 Rule 5: If one is object and other is primitive → convert object to primitive
