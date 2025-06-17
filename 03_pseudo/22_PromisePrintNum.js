@@ -4,17 +4,17 @@
 // 3.	Return a Promise that resolves when counting is complete.
 
 function asyncCounter(n) {
-    return new Promise((resolve) => {
-      for (let i = 1; i <= n; i++) {
-        setTimeout(() => {
-          console.log(i);
-          if (i === n) {
-            resolve("Counting complete ✅");
-          }
-        }, i * 1000);
-      }
-    });
-  }
-  
-  // Example usage:
-  asyncCounter(5).then(msg => console.log(msg));
+  return new Promise((resolve) => {
+    for (let i = 1; i <= n; i++) {
+      setTimeout(() => {
+        console.log(i);
+        if (i === n) {
+          resolve("Counting complete ✅");
+        }
+      }, i * 1000);
+    }
+  });
+}
+
+// Example usage:
+asyncCounter(5).then(msg => console.log(msg));
