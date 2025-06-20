@@ -12,6 +12,24 @@
   // Weakly Typed : Javascript ==> we can add number and string variable 
   // Strongly Typed : typescript ==> we can not add number and string bcz diff data type 
 
+  // Dynamic Typed (JS)
+   let x1 = 10;  // x is a number
+       x1 = "hello"; // Now x is a string
+
+  // Static Typed (TS)
+  // let x2: number = 10;
+  //     x2 = "hello"; // ❌ Error: Type 'string' is not assignable to type 'number'     
+
+  // Weakly Typed (JS)
+  console.log("5" - 2); // 3 — JS converts "5" to number
+
+  // Strongly Typed (TS)
+  // let x11: number = 5;
+  // let y11: string = "10";   
+  // console.log(x11 + y11);       // Works (string concat), but TS will warn if types mismatch
+
+//  ✅ TypeScript is strongly typed, but it's still compiled to JavaScript, so many JS coercions still work.
+//  ✅ You can use strict mode in tsconfig.json to enforce stronger checks and avoid unexpected behavior.
 //------------------------------------------------------------------------------------------------------------------  
 
 // Data Type -data ko kis tarike se memory me store kiya jata hain aur kis type se access kiya jata hain
@@ -20,7 +38,7 @@
 //  1) Primitive and 2) non-Primitive (referance type)
 
 // 1) Primitive Datatype
-    //   - String, Boolean, number, null, undefined, symbol, BigInt
+    //   🟠 String, Boolean, number, null, undefined, symbol, BigInt
 
     // Primitive DataType me Stack memory use hoti hian
 
@@ -36,7 +54,7 @@
       console.log(`myStack1 value is : ${myStack1}`);  // 1000gb    that means in heap memory make a copy of orignal value and do changes 
 
 // 2) Non-Primitive
-    //   - Array, Object, function   ( in sbka return type Object hi ata hain)
+    //   🟠 Array, Object, function   ( in sbka return type Object hi ata hain)
 
     // Non-Primitive DataType me Heap memory use hoti hian
 

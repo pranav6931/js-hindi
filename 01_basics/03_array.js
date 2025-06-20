@@ -26,26 +26,26 @@ console.log(arrJoin);                            // 1,2,3,4,5   it's typeOf is s
 
 //  Slice
 
-const arr = [1, 2, 3, 4, 5];
-const result = arr.slice(1, 4); // from index 1 to 3 (4 is excluded)
+const arr1 = [1, 2, 3, 4, 5];
+const result = arr1.slice(1, 4); // from index 1 to 3 (4 is excluded)
 
 console.log(result); // [2, 3, 4]
-console.log(arr);    // [1, 2, 3, 4, 5]       (✅ original unchanged)
+console.log(arr1);    // [1, 2, 3, 4, 5]       (✅ original unchanged)
 
 
 //  Splice
 
-const arr = [1, 2, 3, 4, 5];
-const removed = arr.splice(1, 2); // remove 2 elements starting at index 1
+const arr2 = [1, 2, 3, 4, 5];
+const removed = arr2.splice(1, 2); // remove 2 elements starting at index 1
 
 console.log(removed); // [2, 3]
-console.log(arr);     // [1, 4, 5] (❗ original modified)
+console.log(arr2);     // [1, 4, 5] (❗ original modified)
 
 // ➕ Bonus: Add using splice()
-const arr = [1, 4, 5];
-arr.splice(1, 0, 2, 3); // at index 1, remove 0, insert 2, 3
+const arr3 = [1, 4, 5];
+arr3.splice(1, 0, 2, 3); // at index 1, remove 0, insert 2, 3
 
-console.log(arr); // [1, 2, 3, 4, 5]
+console.log(arr3); // [1, 2, 3, 4, 5]
 
 // 🎤 Interview-Ready Answer:
 // The slice() method returns a shallow copy of a portion of an array, without modifying the original array — it's non-destructive.

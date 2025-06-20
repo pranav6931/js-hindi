@@ -45,7 +45,7 @@ console.log(myObj.age);                               //  age is 28 -- not delet
 // | Object is immutable             | ✅ Fully           | 🚫 Partially    |
 
 // Mutable vs Immutable
-// mutable (modifies orignal) vs Immutable (not-modifies orignal)
+// 🟠 mutable (modifies orignal) vs 🟠 Immutable (not-modifies orignal)
 
 // Mutable  - Object, Array, Function
 let object1 = { name: "Alice" };
@@ -103,6 +103,7 @@ console.log(myObj1.jsUserFun1());
 
 // //////////////////////////////////////
 // antother way to write object
+// 2) object constructor
 
 const tinderUser = new Object();
 console.log(tinderUser);
