@@ -32,6 +32,12 @@ console.log(names.includes('Pranav'));                      // true ✅
 
 
 // 4️⃣ Using fromIndex
+// // Syntax
+// arr.includes(valueToFind, fromIndex);
+// valueToFind: The value you're searching for in the array.
+// fromIndex (optional): The index to start searching from.
+// If fromIndex is negative, it’s counted from the end of the array.
+
 const items = ['a', 'b', 'c', 'a'];
 
 console.log(items.includes('a', 2));                        // true (finds 'a' at index 3)

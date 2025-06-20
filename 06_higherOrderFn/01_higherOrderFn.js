@@ -55,3 +55,6 @@ console.log(higherOrderFunction20(20)('ram'));
 // A higher-order function is the one that uses the callback (or returns a function).
 
 // So, a higher-order function uses a callback, but they are not the same.
+
+
+

@@ -1,6 +1,6 @@
 // reduce()
-// it reduce Array to single string 
-// it returns single value ( number, string, object etc)
+// it reduce Array to single accumulated result 
+// it returns single value ( number, string, object etc.)
 //
 
 // array.reduce((accumulator, currentValue, index, array) => {

@@ -39,7 +39,7 @@ const mapModify = arr3.map(ele =>{
 });
 console.log(mapModify);
 
-// now using forEach     --  it will not return anything
+// now using forEach     --  it will not return anything that's why we are using outer empthy array to push ele in it 
 const forEachModify = [];
 arr3.forEach(ele =>{
     forEachModify.push(ele*2);

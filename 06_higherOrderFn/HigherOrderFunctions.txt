@@ -1,4 +1,4 @@
-Method	                Use Case Example
+Method	                Use Case Example     
 
 map()	                Transform each item
 filter()	            Keep only matching items
@@ -29,3 +29,10 @@ forEach()	Run a function on each item	                  ❌ No	                 
 
 // find()               |    First matching element or undefined     |             🔍 One
 // filter()             |      Array of all matching elements        |             🔎 Many
+
+
+
+🎯  yaad rhe sabhi higher order function apne aap call execute hote hian 
+sbhi kuch n kuch return karte hain except forEach, jo sbhi return apne aap hi krte hain lekin return  value ko dekhne ke liye 
+hume use kisi variable me hold bhi karna pdta hain.
+aur forEach me nhi krna pdta 
