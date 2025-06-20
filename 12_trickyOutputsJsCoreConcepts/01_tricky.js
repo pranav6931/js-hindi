@@ -70,11 +70,11 @@ console.log(b1);        // output: 100
 
 
 // 🔵 7. var inside loop (not block scoped)
-for (var i = 0; i < 3; i++) {}
+for (var i = 0; i < 3; i++) { }
 console.log(i);           // output: 3
 
 //
-for (let j = 0; j < 3; j++) {}
+for (let j = 0; j < 3; j++) { }
 // console.log(j);        // ReferenceError: j is not defined
 
 
@@ -116,13 +116,13 @@ console.log(person2.getName()); // output: undefined (arrow function doesn't bin
 for (var i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 100);
 }
-                                                 // output: 3 3 3
-                                                //  ok due to 3 iteration setTimeout executes 3 times but at the time of execution the current value of i is 3 so it prints 3 3 3 (even if u set time as 0the output will be same )
+// output: 3 3 3
+//  ok due to 3 iteration setTimeout executes 3 times but at the time of execution the current value of i is 3 so it prints 3 3 3 (even if u set time as 0the output will be same )
 
 for (let j = 0; j < 3; j++) {
   setTimeout(() => console.log(j), 100);
 }
-                                                 // output: 0 1 2
+// output: 0 1 2
 
 
 // 🔴 11. Redeclaration & Scope Conflicts
@@ -144,7 +144,35 @@ function demo(x = y, y = 2) {
 
 
 
+// see below hoisting and var scope example
+function parent() {
+  console.log(x)                 // undefined
+  var x = 10;
+  function child() {
+    console.log(x)              // 10
+    x = 50
+    console.log(x)               //50
+  }
+  child()
+  console.log(x)                   //50
+}
+parent()
 
+
+// but if we add need variable in child function then see
+
+function parent1() {
+  console.log(x)                 // undefined
+  var x = 10;
+  function child1() {
+    console.log(x)              // undefined
+    var x = 50
+    console.log(x)               //50
+  }
+  child1()
+  console.log(x)                   //10
+}
+parent1()
 
 
 
