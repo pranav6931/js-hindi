@@ -15,3 +15,9 @@ Promise.all([fetchUser1,fetchUser2,fetchUser3]).then((res)=>{
 }).catch((error)=>{
     console.log(error);
 })
+
+
+// 25. Promise.all() vs Promise.race() vs Promise.allSettled()?
+// Use Promise.all() when all promises must succeed.
+// Use Promise.race() when you want the first response, successful or failed.
+// Use Promise.allSettled() when you want to handle every result individually, regardless of success or failure.

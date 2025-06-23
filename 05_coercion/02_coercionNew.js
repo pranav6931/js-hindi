@@ -289,11 +289,11 @@ var x = 220;
 var y = "Hello";
 var z = undefined;
         
-console.log(x || y )   // Returns 220 since the first value is truthy          ### 🔹 OR operator (`||`) — returns the **first truthy** value it finds:
-console.log(x || z)   // Returns 220 since the first value is truthy
+console.log(x || y )   // Returns 220 since the first value is truthy          ### 🔹 OR operator (`||`) — returns the **first truthy** value it finds: If all values are falsy, it returns the last falsy value.
+console.log(x || z)   // Returns 220 since the first value is truthy            // first truthy if both false then last falsy
 
 console.log(x && y)    // Returns "Hello" since both the values are truthy    🔹 AND operator (&&) — returns the first falsy value, or the last value if all are truthy:
-console.log(y && z)   // Returns undefined since the second value is falsy
+console.log(y && z)   // Returns undefined since the second value is falsy     // first falsy if both true then last truthy
         
 if( x && y ){ 
   console.log("Code runs" ); // This block runs because x && y returns "Hello" (Truthy)

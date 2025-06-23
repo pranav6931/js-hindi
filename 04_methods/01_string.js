@@ -22,3 +22,21 @@ console.log(str1.trim());                                          // Hello
 
 console.log(str.concat(str1));                                     // to concat string 
 
+/////////////////////////////////////////////
+
+// substring vs slice
+
+let str11 = "JavaScript";
+
+console.log(str11.slice(0, 4));       // "Java"
+console.log(str11.substring(0, 4));   // "Java"
+
+
+console.log(str11.slice(-6));         // "Script"
+console.log(str.slice(-5,-2));        // cri
+
+console.log(str11.substring(-6));     // "JavaScript" (because -6 becomes 0)
+
+
+console.log(str.slice(5, 2));       // "" (empty string)
+console.log(str.substring(5, 2));   // "vaS" (automatically swaps 2 and 5)

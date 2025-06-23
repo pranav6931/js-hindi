@@ -54,3 +54,20 @@ console.log(flatArr);                                // [ 10, 20, 30, 20, 30 ]
 const arr2 = ['main', 'hu', 'don' ];
 console.log(arr2.join(""));                        // mainhudon
 
+
+// slice vs splice
+
+//  Slice
+const arr11 = [1, 2, 3, 4, 5];
+const result = arr11.slice(1, 4); // from index 1 to 3 (4 is excluded)
+
+console.log(result); // [2, 3, 4]
+console.log(arr11);    // [1, 2, 3, 4, 5]       (✅ original unchanged)
+
+
+//  Splice
+const arr22 = [1, 2, 3, 4, 5];
+const removed = arr22.splice(1, 2); // remove 2 elements starting at index 1
+
+console.log(removed); // [2, 3]
+console.log(arr2);     // [1, 4, 5] (❗ original modified)
